@@ -15,26 +15,64 @@
 			}
 		</style>
 	</head>
-	<body>
+  <body>
 		<div id="info">
 		</div>
+    <script>
+
+
+
+			let model, action, clock, camera, controls, scene, renderer;
+			let mixer, skeletonHelper;
+      var paused = false;
+      function pauseAnimation(){
+        paused = true;
+        clock.running = false;
+      }
+      function playAnimation(){
+        paused = false;
+        clock.start()
+      }
+    </script>
 
 		<script type="module">
 
+/** Convert an edges geometry to a set of cylinders w/ the given thickness. */
+function getCylinder(geometry, thickness){
+  const {position} = geometry.attributes;
+  const {array, count} = position;
+  const r = thickness / 2;
+  const geoms = [];
+  for (let i = 0; i < count * 3 - 1; i += 6) {
+    const a = new THREE.Vector3(array[i], array[i + 1], array[i + 2]);
+    const b = new THREE.Vector3(array[i + 3], array[i + 4], array[i + 5]);
+
+    const vec = new THREE.Vector3().subVectors(b, a);
+    const len = vec.length();
+    const geom = new THREE.CylinderBufferGeometry(r, r, len, 8);
+    geom.translate(0, len / 2, 0);
+    geom.rotateX(Math.PI / 2);
+    geom.lookAt(vec);
+    geom.translate(a.x, a.y, a.z);
+    geoms.push(geom);
+  }
+  return THREE.BufferGeometryUtils.mergeBufferGeometries(geoms);
+}
 			import * as THREE from '../build/three.module.js';
+
+     import { BufferGeometryUtils } from './jsm/utils/BufferGeometryUtils.js';
 
 			import { OrbitControls } from './jsm/controls/OrbitControls.js';
 			import { BVHLoader } from './jsm/loaders/BVHLoader.js';
 
-			const clock = new THREE.Clock();
+			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+			clock = new THREE.Clock();
 
-			let camera, controls, scene, renderer;
-			let mixer, skeletonHelper;
 
 			init();
 			animate();
 
-			const loader = new BVHLoader();
+const loader = new BVHLoader();
 			loader.load( "models/bvh/motionbuilder-format.bvh", function ( result ) {
 
 				skeletonHelper = new THREE.SkeletonHelper( result.skeleton.bones[ 0 ] );
@@ -52,15 +90,16 @@
 
 			} );
 
+
 			function init() {
 
 				camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
 				camera.position.set( 0, 200, 300 );
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xeeeeee );
 
-				scene.add( new THREE.GridHelper( 400, 10 ) );
+				scene.background = new THREE.Color( 0x121212 );
+				scene.add( new THREE.GridHelper( 400, 1 ) );
 
 				// renderer
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -86,8 +125,13 @@
 			}
 
 			function animate() {
+if(action){
+//console.log(action.getClip().duration);
+//console.log(action.time);
+}
 
 				requestAnimationFrame( animate );
+        if(paused) return;
 
 				const delta = clock.getDelta();
 
@@ -98,5 +142,8 @@
 			}
 
 		</script>
+    <script>
+
+    </script>
 	</body>
 </html>

@@ -22,8 +22,8 @@ class SkeletonHelper extends LineSegments {
 		const vertices = [];
 		const colors = [];
 
-		const color1 = new Color( 0, 0, 1 );
-		const color2 = new Color( 0, 1, 0 );
+		const color1 = new Color( 1, 0, 0 );
+		const color2 = new Color( 1, 0, 0 );
 
 		for ( let i = 0; i < bones.length; i ++ ) {
 
@@ -43,7 +43,7 @@ class SkeletonHelper extends LineSegments {
 		geometry.setAttribute( 'position', new Float32BufferAttribute( vertices, 3 ) );
 		geometry.setAttribute( 'color', new Float32BufferAttribute( colors, 3 ) );
 
-		const material = new LineBasicMaterial( { vertexColors: true, depthTest: false, depthWrite: false, toneMapped: false, transparent: true } );
+		const material = new LineBasicMaterial( {vertexColors: true, depthTest: true, linewidth:3, depthWrite: true, toneMapped: true, transparent: true } );
 
 		super( geometry, material );
 

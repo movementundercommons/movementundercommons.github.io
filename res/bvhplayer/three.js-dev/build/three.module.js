@@ -1,3 +1,5 @@
+//
+
 // threejs.org/license
 const REVISION = '124';
 const MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 };
@@ -47330,8 +47332,8 @@ class SkeletonHelper extends LineSegments {
 		const vertices = [];
 		const colors = [];
 
-		const color1 = new Color( 0, 0, 1 );
-		const color2 = new Color( 0, 1, 0 );
+		const color1 = new Color( 1, 0.84, 0 );
+		const color2 = new Color( 0.5, 0, 0 );
 
 		for ( let i = 0; i < bones.length; i ++ ) {
 
@@ -47351,7 +47353,61 @@ class SkeletonHelper extends LineSegments {
 		geometry.setAttribute( 'position', new Float32BufferAttribute( vertices, 3 ) );
 		geometry.setAttribute( 'color', new Float32BufferAttribute( colors, 3 ) );
 
-		const material = new LineBasicMaterial( { vertexColors: true, depthTest: false, depthWrite: false, toneMapped: false, transparent: true } );
+
+		const material = new LineBasicMaterial( {linewidth:3, vertexColors: true, depthTest: true, depthWrite: true, toneMapped: true, transparent: true } );
+
+
+
+ // geometry = getCylinder(geometry, 1);
+
+
+ /*
+ var edgesGeom = geometry;
+ var thickness = 1.25;
+for (var i = 0; i < edgesGeom.attributes.position.count - 1; i+=2){
+
+  // when you know that it's BufferGeometry, you can find vertices in this way
+  var startPoint = new Vector3(
+    edgesGeom.attributes.position.array[i * 3 + 0],
+    edgesGeom.attributes.position.array[i * 3 + 1],
+    edgesGeom.attributes.position.array[i * 3 + 2]
+  );
+    var endPoint = new Vector3(
+    edgesGeom.attributes.position.array[i * 3 + 3],
+    edgesGeom.attributes.position.array[i * 3 + 4],
+    edgesGeom.attributes.position.array[i * 3 + 5]
+  );
+
+  var cylLength = new Vector3().subVectors(endPoint, startPoint).length(); // find the length of a cylinder
+  var cylGeom = new CylinderBufferGeometry(thickness, thickness, cylLength, 16);
+  cylGeom.translate(0, cylLength / 2, 0);
+  cylGeom.rotateX(Math.PI / 2);
+  var cyl = new Mesh(cylGeom, new MeshLambertMaterial({color: "blue"}));
+  cyl.position.copy(startPoint);
+  cyl.lookAt(endPoint);  // and do the trick with orienation
+}
+*/
+
+/*
+ const {position} = geometry.attributes;
+ var thickness = 1;
+  const {array, count} = position;
+  const r = thickness / 2;
+  const geoms = [];
+  for (let i = 0; i < count * 3 - 1; i += 6) {
+    const a = new Vector3(array[i], array[i + 1], array[i + 2]);
+    const b = new Vector3(array[i + 3], array[i + 4], array[i + 5]);
+
+    const vec = new Vector3().subVectors(b, a);
+    const len = vec.length();
+    const geom = new CylinderBufferGeometry(r, r, len, 8);
+    geom.translate(0, len / 2, 0);
+    geom.rotateX(Math.PI / 2);
+    geom.lookAt(vec);
+    geom.translate(a.x, a.y, a.z);
+    geoms.push(geom);
+  }
+  */
 
 		super( geometry, material );
 
