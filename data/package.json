@@ -1,2 +1,26 @@
 {
+  id: "move-under",
+  version: "1.0.0",
+  mocaps:[
+    {
+      folder:"2eOW2fUiRZmJUuaG5F",
+      bvh: "other/motionbuilder-format.bvh",
+      info: "package.json",
+      tags: []
+    },
+    {
+      folder:"AU0WOAT4QNGwUWcrFvGBkQ",
+      bvh: "other/motionbuilder-format.bvh",
+      info: "package.json",
+      tags: []
+    },
+    {
+      folder:"sQjxBTqjRcSuEgXLyLqWFA",
+      bvh: "other/motionbuilder-format.bvh",
+      info: "package.json",
+      tags: []
+    }
+  ],
+  tags:[
+  ]
 }
