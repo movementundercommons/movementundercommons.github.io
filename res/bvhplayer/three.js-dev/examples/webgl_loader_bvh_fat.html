@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>three.js webgl - loaders - BVHLoader</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<style>
+			body {
+				background-color: #eee;
+				color: #444;
+			}
+			a {
+				color: #08f;
+			}
+		</style>
+	</head>
+  <body>
+		<div id="info">
+		</div>
+    <script>
+			let model, action, clock, camera, controls, scene, renderer;
+			let mixer, skeletonHelper;
+      var paused = false;
+      function pauseAnimation(){
+        paused = true;
+        clock.running = false;
+      }
+      function playAnimation(){
+        paused = false;
+        clock.start()
+      }
+    </script>
+
+		<script type="module">
+			import * as THREE from '../build/three.module.js';
+
+			import { OrbitControls } from './jsm/controls/OrbitControls.js';
+			import { BVHLoader } from './jsm/loaders/BVHLoader.js';
+
+			import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+
+			import { LineSegments2 } from './jsm/lines/LineSegments2.js';
+			import { LineSegmentsGeometry } from './jsm/lines/LineSegmentsGeometry.js';
+			import { LineMaterial } from './jsm/lines/LineMaterial.js';
+			import { GeometryUtils } from './jsm/utils/GeometryUtils.js';
+			clock = new THREE.Clock();
+
+			class SkeletonHelperThick extends LineSegments2 {
+				constructor(object, material) {
+					var bones = getBoneList(object);
+					var geometry = new LineSegmentsGeometry();
+
+					var vertices = [];
+					var colors = [];
+
+					var vector = new THREE.Vector3();
+					var bone_matrix = new THREE.Matrix4();
+					var matrix_world_inverse = new THREE.Matrix4();
+
+					matrix_world_inverse.copy(object.matrixWorld).invert();
+
+					for (var i = 0; i < bones.length; i++) {
+						var bone = bones[i];
+
+						// First bone is the root and doesn't need a line.
+						// Each bone has a start point (its parent) and an end point.
+						if (bone.parent && bone.parent.isBone) {
+							vertices.push(0,0,0); vertices.push(0,0,0);
+							colors.push(1,1,1); colors.push(1,1,1);
+						}
+					}
+
+					geometry.setPositions(vertices);
+					geometry.setColors(colors);
+					super(geometry, material);
+					this.type = 'SkeletonHelperThick';
+					this.isSkeletonHelperThick = true;
+
+					this.root = object;
+					this.bones = bones;
+
+					this.matrix = object.matrixWorld;
+					this.matrixAutoUpdate = false;
+				}
+
+				updateMatrixWorld(force) {
+					var position = this.geometry.getAttribute('position');
+
+					var vertices = [];
+					var vector = new THREE.Vector3();
+					var bone_matrix = new THREE.Matrix4();
+					var matrix_world_inverse = new THREE.Matrix4();
+
+					matrix_world_inverse.copy(this.root.matrixWorld).invert();
+
+					for (let i = 0, j = 0; i < this.bones.length; i++) {
+						var bone = this.bones[i];
+
+						if (bone.parent && bone.parent.isBone) {
+							bone_matrix.multiplyMatrices(matrix_world_inverse, bone.matrixWorld);
+							vector.setFromMatrixPosition(bone_matrix);
+							vertices.push(vector.x, vector.y, vector.z);
+
+							bone_matrix.multiplyMatrices(matrix_world_inverse, bone.parent.matrixWorld);
+							vector.setFromMatrixPosition(bone_matrix);
+							vertices.push(vector.x, vector.y, vector.z);
+						}
+					}
+
+					this.geometry.setPositions(vertices);
+
+					position.needsUpdate = true;
+					super.updateMatrixWorld(force);
+				}
+			}
+
+			function getBoneList(object) {
+				const boneList = [];
+
+				if (object && object.isBone)
+					boneList.push(object);
+
+				for (let i = 0; i < object.children.length; i ++)
+					boneList.push.apply(boneList, getBoneList(object.children[i]));
+
+				return boneList;
+			}
+
+			let insetWidth, insetHeight;
+
+			let matLine = new LineMaterial({
+					color: 0xffffff,
+					linewidth: 5, // in pixels
+					vertexColors: true,
+					//resolution:  // to be set by renderer, eventually
+					dashed: false
+			});
+
+			init();
+			animate();
+
+			function init() {
+				camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+				camera.position.set(0, 200, 300);
+
+				scene = new THREE.Scene();
+
+				scene.background = new THREE.Color(0xFFC627);
+				scene.add( new THREE.GridHelper(400, 10 ,0xffffff, 0xffffff));
+
+				const loader = new BVHLoader();
+				loader.load("models/bvh/motionbuilder-format.bvh", function (result) {
+					skeletonHelper = new SkeletonHelperThick(result.skeleton.bones[0], matLine);
+					skeletonHelper.skeleton = result.skeleton; // allow animation mixer to bind to THREE.SkeletonHelper directly
+
+					const boneContainer = new THREE.Group();
+					boneContainer.add(result.skeleton.bones[0]);
+
+					skeletonHelper.computeLineDistances();
+					skeletonHelper.scale.set( 1, 1, 1 );
+					scene.add(skeletonHelper);
+					scene.add(boneContainer);
+
+					// play animation
+					mixer = new THREE.AnimationMixer(skeletonHelper);
+					mixer.clipAction(result.clip).setEffectiveWeight(1.0).play();
+				});
+				// renderer
+				renderer = new THREE.WebGLRenderer({antialias: true});
+				renderer.setPixelRatio(window.devicePixelRatio);
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				document.body.appendChild(renderer.domElement);
+
+				controls = new OrbitControls(camera, renderer.domElement);
+				controls.minDistance = 300;
+				controls.maxDistance = 700;
+
+				window.addEventListener('resize', onWindowResize, false);
+				onWindowResize();
+			}
+
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize(window.innerWidth, window.innerHeight);
+			}
+
+			function animate() {
+				requestAnimationFrame(animate);
+				renderer.setViewport(0, 0, window.innerWidth, window.innerHeight);
+				matLine.resolution.set(window.innerWidth, window.innerHeight); // resolution of the viewport
+
+        if (paused) return;
+				const delta = clock.getDelta();
+				if (mixer) mixer.update(delta);
+
+				renderer.render(scene, camera);
+			}
+
+		</script>
+    <script>
+
+    </script>
+	</body>
+</html>
