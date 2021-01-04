@@ -22,7 +22,7 @@
 
     <!-- Navbar and Header -->
     <nav class="nav-extended">
-      <div class="nav-background">
+      <div class="nav-background" style='background-color:transparent'>
         <div class="pattern active" style=";"></div>
       </div>
       <div class="nav-wrapper container">
@@ -43,7 +43,7 @@
       </div>
 
       <!-- Fixed Masonry Filters -->
-      <div class="categories-wrapper purple lighten-1">
+      <div class="categories-wrapper purple lighten">
         <div class="categories-container">
           <ul class="categories container">
             <li class="active"><a href="#all">All</a></li>
@@ -93,10 +93,10 @@
   var itemMarkup =
   '<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">'+
     '<div class="gallery-curve-wrapper">'+
-      '<a class="gallery-cover gray" style="box-shadow:none">'+
+      '<a class="gallery-cover gray" style="display:block;box-shadow:none">'+
         '<iframe class="responsive-img responsive-iframe" src="/res/bvhplayer2/index.html" alt="placeholder"></iframe>'+
       '</a>'+
-      '<div class="gallery-header" style="background-color:#535353;color:#FFC627;">'+
+      '<div class="gallery-header" style="background-color:#000000;color:#FFC627;">'+
         '<span>__TITLE__</span>'+
       '</div>'+
       '<div class="gallery-body" style="background:black;color:white">'+
@@ -108,9 +108,10 @@
         '</div>'+
       '</div>'+
       '<div class="gallery-action">'+
-        '<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#8C1D40">play_arrow</i></a>'+
+        '<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">play_arrow</i></a>'+
       '</div>'+
     '</div>'+
+    '<div class="itemCover"></div>'+
   '</div>'
   </script>
 
@@ -120,13 +121,13 @@ body{
   background: url(res/frontpage/img/interlaced.png);
 }
 
-  nav{
-    background: #121212;
+  nav.nav-extended{
+    background-color: transparent;
     background-image: url('res/frontpage/img/header.jpg');
     background-position: 50%;
     background-size:cover;
   }
-  .purple.lighten-1 {
+  .purple.lighten {
     background-color: rgb(53,53,53) !important;
   }
   .responsive-iframe{
@@ -134,10 +135,24 @@ body{
     height: 35vh;
     border:none;
   }
+  nav#placeholder-navbar .nav-wrapper{
+    background: #121212;
+  }
   .gallery .gallery-header{
     color:#FFC627;
-    background-color: #535353;
+    background-color: #000000;
     margin-top:-10px;
+  }
+  .itemCover{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index:100;
+  }
+  .gallery-item{
+    position:relative;
   }
 </style>
 </html>

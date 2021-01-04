@@ -510,6 +510,7 @@
               // Save animationEndState
               animationEndState = placeholder.clone(true);
 
+      $(".itemCover").fadeOut(0);
               // Static placeholder.
               placeholder.css({
                 transform: '',
@@ -595,6 +596,8 @@
           }
 
           returnClickable = false;
+         
+      $(".itemCover").fadeIn(0);
 
           // Clear hash
           if (dynamicRouting) {
