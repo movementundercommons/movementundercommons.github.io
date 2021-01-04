@@ -117,8 +117,13 @@
 
 
 <style>
-body{
-  background: url(res/frontpage/img/interlaced.png);
+html{
+}
+body,html{
+  background: url(res/frontpage/img/hotel-wallpaper-black.png);
+  background-attachment:fixed;
+  background-size:500px;
+  background-color:black;
 }
 
   nav.nav-extended{
@@ -138,6 +143,9 @@ body{
   nav#placeholder-navbar .nav-wrapper{
     background: #121212;
   }
+  .placeholder:hover{
+    box-shadow:0px 0px 50px #FFC627;
+  }
   .gallery .gallery-header{
     color:#FFC627;
     background-color: #000000;
@@ -153,6 +161,10 @@ body{
   }
   .gallery-item{
     position:relative;
+  }
+  .placeholder{
+  border-radius: 24px;
+    overflow: hidden;
   }
 </style>
 </html>
