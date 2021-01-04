@@ -1,26 +1,24 @@
-{
-  id: "move-under",
-  version: "1.0.0",
-  mocaps:[
-    {
-      folder:"2eOW2fUiRZmJUuaG5F",
-      bvh: "other/motionbuilder-format.bvh",
-      info: "package.json",
-      tags: []
+{ 
+  "id":"moveUnder", 
+  "version":"1.0.0",
+  "mocaps":{
+    "capture1":{
+      "info":"package.json",
+      "csv": "csv",
+      "bvh": "other/motionbuilder-format.bvh"
     },
-    {
-      folder:"AU0WOAT4QNGwUWcrFvGBkQ",
-      bvh: "other/motionbuilder-format.bvh",
-      info: "package.json",
-      tags: []
+    "capture2":{
+      "info":"package.json",
+      "csv": "csv",
+      "bvh": "other/motionbuilder-format.bvh"
     },
-    {
-      folder:"sQjxBTqjRcSuEgXLyLqWFA",
-      bvh: "other/motionbuilder-format.bvh",
-      info: "package.json",
-      tags: []
+    "capture3":{
+      "info":"package.json",
+      "csv": "csv",
+      "bvh": "other/motionbuilder-format.bvh"
     }
-  ],
-  tags:[
-  ]
+  },
+  "tags":{
+  }
 }
+
