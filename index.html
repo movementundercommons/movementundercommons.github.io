@@ -173,6 +173,14 @@ function loadFile(filename, callback)
     loadFile("./data/package.json", function(data){
       appt = data
       app = JSON.parse(data);
+      var mu = "";
+      var mcs = Object.keys(app.mocaps);
+      alert(mcs)
+      for(var i = 0; i < mcs.length; i++){
+        mu += itemMarkup;
+      }
+      document.getElementById("theGallery").innerHTML = mu;
+      init()
     });
   }
   </script>
