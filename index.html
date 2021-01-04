@@ -93,13 +93,13 @@
   var itemMarkup =
   '<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">'+
     '<div class="gallery-curve-wrapper">'+
-      '<a class="gallery-cover gray">'+
+      '<a class="gallery-cover gray" style="box-shadow:none">'+
         '<iframe class="responsive-img responsive-iframe" src="/res/bvhplayer/three.js-dev/examples/webgl_loader_bvh.html" alt="placeholder"></iframe>'+
       '</a>'+
-      '<div class="gallery-header">'+
+      '<div class="gallery-header" style="color:#8C1D40;background:#FFC627;">'+
         '<span>__TITLE__</span>'+
       '</div>'+
-      '<div class="gallery-body">'+
+      '<div class="gallery-body" style="background:black;color:white">'+
         '<div class="title-wrapper">'+
           '<h3>__TITLE__</h3>'+
           '<span class="price">__PRICE__</span>'+
@@ -108,7 +108,7 @@
         '</div>'+
       '</div>'+
       '<div class="gallery-action">'+
-        '<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">favorite</i></a>'+
+        '<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#8C1D40">play_arrow</i></a>'+
       '</div>'+
     '</div>'+
   '</div>'
@@ -131,8 +131,12 @@ body{
   }
   .responsive-iframe{
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     border:none;
+  }
+  .gallery .gallery-header{
+    background:#FFC627;
+    color: #8C1D40;
   }
 </style>
 </html>

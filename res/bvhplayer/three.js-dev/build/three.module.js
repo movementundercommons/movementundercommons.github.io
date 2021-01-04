@@ -47354,17 +47354,18 @@ class SkeletonHelper extends LineSegments {
 		geometry.setAttribute( 'color', new Float32BufferAttribute( colors, 3 ) );
 
 
-		const material = new LineBasicMaterial( {linewidth:3, vertexColors: true, depthTest: true, depthWrite: true, toneMapped: true, transparent: true } );
+		const material = new LineMaterial( {linewidth:3, vertexColors: true, depthTest: true, depthWrite: true, toneMapped: true, transparent: true } );
+
 
 
 
  // geometry = getCylinder(geometry, 1);
 
 
- /*
  var edgesGeom = geometry;
  var thickness = 1.25;
-for (var i = 0; i < edgesGeom.attributes.position.count - 1; i+=2){
+/*
+ for (var i = 0; i < edgesGeom.attributes.position.count - 1; i+=2){
 
   // when you know that it's BufferGeometry, you can find vertices in this way
   var startPoint = new Vector3(
