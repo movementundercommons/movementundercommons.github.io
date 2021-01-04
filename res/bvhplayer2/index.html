@@ -7,12 +7,6 @@
 	<meta content="utf-8" http-equiv="encoding">
 	<meta http-equiv="X-UA-Compatible" content="IE=11,chrome=1">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<meta property="og:image" content="http://lo-th.github.io/olympe/res/img/logo.png"/>
-	<meta property="og:title" content="Advanced Morphing"/>
-	<meta property="og:url" content="http://lo-th.github.io/olympe/"/>
-	<meta property="og:site_name" content="LOTH"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:description" content="Experiment full morphing in webGl"/>
 	<meta name="language" content="en-us" />
 	<link rel="shortcut icon" href="res/img/favicon.ico" type="image/x-icon" />
 	<link href="css/dianna.css" rel="stylesheet" type="text/css">
@@ -98,7 +92,7 @@
 
 			document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
-			addGUI();
+	//		addGUI();
 
 			initScene3D();
 
@@ -292,14 +286,13 @@
 			bvhReader = new BVH.Reader();
 			bvhReader.speed = BVHanimConfig.speed;
 
-			loadBVH("action.png");
+			 bvhReader.load("../../data/files/2eOW2fUiRZmJUuaG5F/other/motionbuilder-format.bvh");
 
-			initBVHGui();
+	//		initBVHGui();
 
 		}
 
 		function loadBVH(name) {
-			 bvhReader.load("res/bvh/"+name);
 		}
 
 		function initBVHGui() {
@@ -501,20 +494,19 @@
 
 	<body>
 		<div id="viewport"></div>
-		<div id="hubs">
+		<div id="hubs" style='display:none'>
 			<div id="debug"></div>
 			<div id="guiContener"><div id="gui"></div></div>
 			<div id="copy">
-				BVH player <a href="http://3dflashlo.wordpress.com/" target="_blank">&nbsp;&nbsp;&nbsp;loth 2014&nbsp;&nbsp;&nbsp;</a>
 			</div>
-			<input type="file" id="files" />
+			<input style='display:none' type="file" id="files" />
 		</div>
 		<div id="BVHhubs">
 
 		</div>
 		
-		<div id="output1"></div>
-		<div id="output2"></div>
+		<div id="output1" style='display:none'></div>
+		<div id="output2" style='display:none'></div>
 
 		
 

@@ -30,9 +30,15 @@ BVH.Reader = function(){
 
 	this.skeleton = null;
 	this.bones = [];
-	this.boneSize = 1.5;
+	this.boneSize = 1.8;
 
-	this.material = new THREE.MeshNormalMaterial();//new THREE.MeshBasicMaterial({ color:0xffffff });
+	this.material =
+    new THREE.MeshBasicMaterial({
+    color: 0xffffff,
+    vertexColors: THREE.FaceColors
+  });
+   // new THREE.MeshNormalMaterial();
+    //new THREE.MeshBasicMaterial({ color:0xffffff });
 }
 
 BVH.Reader.prototype = {
@@ -130,7 +136,21 @@ BVH.Reader.prototype = {
 
     	var n = this.nodes.length, node, bone;
     	//var geo = new THREE.CubeGeometry( 0.2, 0.2, 10 );//new THREE.Geometry();
-    	var geo = new THREE.CubeGeometry( this.boneSize, this.boneSize, 1);
+    	var geo = new THREE.BoxGeometry( this.boneSize, this.boneSize, 1);
+     // colors
+maroon = new THREE.Color(140/255, 29/255, 64/255);
+gold = new THREE.Color(255/255, 198/255, 39/255);
+gray = new THREE.Color(12/255, 12/255, 12/255);
+var colors = [maroon, gold, gray]
+
+for (var i = 0; i < 3; i++) {
+    geo.faces[4 * i].color = colors[i];
+    geo.faces[4 * i + 1].color = colors[i];
+    geo.faces[4 * i + 2].color = colors[i];
+    geo.faces[4 * i + 3].color = colors[i];
+}
+
+    //	var geo = new THREE.CylinderGeometry( 5,5, 20, 20)
     	//geo.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, 6 ) );
     	geo.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, 0.5 ) );
     	//var mat = new THREE.MeshNormalMaterial();
