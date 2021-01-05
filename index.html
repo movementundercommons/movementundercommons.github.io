@@ -143,7 +143,6 @@ function loadFile(filename, callback)
   </body>
   <script>
   var itemMarkup =
-  '<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter polygon">'+
     '<div class="gallery-curve-wrapper">'+
       '<a class="gallery-cover gray" style="display:block;box-shadow:none">'+
         '<iframe class="responsive-img responsive-iframe" src="/res/bvhplayer2/index.html" alt="placeholder"></iframe>'+
@@ -154,7 +153,7 @@ function loadFile(filename, callback)
       '<div class="gallery-body" style="background:black;color:white">'+
         '<div class="title-wrapper">'+
           '<h3>__TITLE__</h3>'+
-          '<span class="price">__PRICE__</span>'+
+          '<span class="price">__DURATION__</span>'+
         '</div>'+
         '<div class="description">__DESC__'+
         '</div>'+
@@ -163,8 +162,8 @@ function loadFile(filename, callback)
         '<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">play_arrow</i></a>'+
       '</div>'+
     '</div>'+
-    '<div class="itemCover"></div>'+
-  '</div>'
+    '<div class="itemCover"></div>'
+
 
   var app;
   var appt;
@@ -175,12 +174,22 @@ function loadFile(filename, callback)
       app = JSON.parse(data);
       var mu = "";
       var mcs = Object.keys(app.mocaps);
-      alert(mcs)
       for(var i = 0; i < mcs.length; i++){
-        mu += itemMarkup;
+        mu += 
+  '<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter __TAGS__" data-count="'+ i +'" data-bvh="__BVHFILE__" id="item_' + mcs[i]+ '">'+
+          itemMarkup + '</div>';
       }
       document.getElementById("theGallery").innerHTML = mu;
       init()
+      for(var i = 0; i < mcs.length; i++){
+        var infoFile = app.mocaps[mcs[i]].info;
+        function y(c, x){
+         loadFile("data/files/"+ mcs[c] + "/" + x, function(data){
+          console.log(c, data);
+         })
+        }
+        y(i, infoFile);
+      }
     });
   }
   </script>

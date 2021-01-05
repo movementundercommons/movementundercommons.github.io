@@ -465,7 +465,7 @@
             if (!fillScreen && $object.length) {
               if (fullWidth) {
                 $body.find('.title-wrapper').css({
-                  marginTop: contentOffsetTop / 2
+                  marginTop: contentOffsetTop / 1.4
                 });
               } else {
                 $body.find('.title-wrapper').css({
