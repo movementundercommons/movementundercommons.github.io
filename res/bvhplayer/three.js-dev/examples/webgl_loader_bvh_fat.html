@@ -164,7 +164,8 @@
 
 					// play animation
 					mixer = new THREE.AnimationMixer(skeletonHelper);
-					mixer.clipAction(result.clip).setEffectiveWeight(1.0).play();
+          action = mixer.clipAction(result.clip)
+					action.setEffectiveWeight(1.0).play();
 				});
 				// renderer
 				renderer = new THREE.WebGLRenderer({antialias: true});
