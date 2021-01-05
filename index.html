@@ -152,7 +152,7 @@ function loadFile(filename, callback)
   var itemMarkup =
     '<div class="gallery-curve-wrapper">'+
       '<a class="gallery-cover gray" style="display:block;box-shadow:none">'+
-        '<iframe class="responsive-img responsive-iframe" src="./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html" alt="placeholder"></iframe>'+
+        '<iframe style="background:black" class="responsive-img responsive-iframe" src="./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html" alt="placeholder"></iframe>'+
       '</a>'+
       '<div class="gallery-header" style="background-color:#000000;color:#FFC627;">'+
         '<span>__TITLE__</span>'+
@@ -160,7 +160,12 @@ function loadFile(filename, callback)
       '<div class="gallery-body" style="background:black;color:white">'+
         '<div class="title-wrapper">'+
           '<h3>__TITLE__</h3>'+
-          '<span class="price">__DURATION__</span>'+
+          '<span class="price duration">__DURATION__</span>'+
+          '<br>'+
+          '<span class="price tags">__TAGS__'+
+          '</span>'+
+        '</div>'+
+        '<div class="download">__DWLD__'+
         '</div>'+
         '<div class="description">__DESC__'+
         '</div>'+
@@ -193,10 +198,99 @@ function loadFile(filename, callback)
 
   }
 
+  var ENV = {
+    device: {
+      iOS: null,
+      iPhone: null,
+      iPad: null,
+      android: null,
+      mouse: null,
+      touch: null
+    },
+    screen:{
+      height:null,
+      width:null,
+      big: null,
+      small: null
+    }
+  }
+
+  function initBodyClasses(){
+  		var ua = window.navigator.userAgent.toLowerCase();
+		if(ua.indexOf('iphone') >=0 || ua.indexOf('ipad') >=0 ){
+			ENV.device.iOS = true;
+			if(ua.indexOf('iphone') >=0){
+				ENV.device.iPhone = true;
+				ENV.device.iPad = false;
+			}
+			else{
+				ENV.device.iPhone = false;
+				ENV.device.iPad = true;
+			}
+
+		}
+		else{
+			ENV.device.iOS = false;
+			ENV.device.iPhone = false;
+			ENV.device.iPad = false;
+		}
+
+
+		if(ua.indexOf('android') >=0){
+			ENV.device.android = true;
+		}
+		else{
+			ENV.device.android = false;
+		}
+
+		if(ENV.device.iOS || ENV.device.android){
+			ENV.device.touch = true;
+			ENV.device.mouse = false;
+		}
+		else{
+			ENV.device.touch = false;
+			ENV.device.mouse = true;
+		}
+
+		if(!ENV.device.android){
+			ENV.screen.height = $(window).height();
+			ENV.screen.width = $(window).width();
+		}
+		else{
+			ENV.screen.height = window.innerHeight;
+			ENV.screen.width = window.innerWidth;
+		}
+
+		if(ENV.screen.width > 1024){
+			ENV.screen.big = true;
+			ENV.screen.small = false;
+		}
+		else{
+			ENV.screen.big = false;
+			ENV.screen.small = true;
+		}
+
+		var docClassName = "";
+		if(ENV.screen.big){
+			docClassName = docClassName + " big";
+		}
+		else{
+			docClassName = docClassName + " small";
+		}
+		if(ENV.device.touch){
+			docClassName = docClassName + " touch";
+		}
+		else{
+			docClassName = docClassName + " mouse";
+		}
+    $("body").addClass(docClassName);
+  }
+
   var app;
   var appt;
   function start()
   {
+    initBodyClasses();
     loadFile("./data/package.json", function(data){
       appt = data
       app = JSON.parse(data);
@@ -270,7 +364,10 @@ body,html{
   .active .placeholder{
     border-radius: 0px;
   }
-  .placeholder:hover{
+  .mouse .placeholder:hover{
+    box-shadow:0px 0px 50px #FFC627;
+  }
+  .touch .placeholder:active{
     box-shadow:0px 0px 50px #FFC627;
   }
   .gallery .gallery-header{
@@ -295,6 +392,14 @@ body,html{
   }
   .gallery-curve-wrapper{
     position:relative;
+  }
+  .description{
+    height:auto;
+    min-height:300px;
+  }
+  .download{
+    height:auto;
+    margin-bottom:20px;
   }
 </style>
 </html>
