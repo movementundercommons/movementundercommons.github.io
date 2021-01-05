@@ -185,6 +185,9 @@ function loadFile(filename, callback)
         var infoFile = app.mocaps[mcs[i]].info;
         function y(c, x){
          loadFile("data/files/"+ mcs[c] + "/" + x, function(data){
+           var obj = JSON.parse(data);
+           $("#item_" + mcs[c] + " .title-wrapper h3").html(obj.title)
+           $("#item_" + mcs[c] + " .gallery-header span").html(obj.title)
           console.log(c, data);
          })
         }
@@ -222,7 +225,7 @@ body,html{
   nav#placeholder-navbar .nav-wrapper{
     background: #121212;
   }
-  .gallery-expand .placeholder{
+  .active .placeholder{
     border-radius: 0px;
   }
   .placeholder:hover{
