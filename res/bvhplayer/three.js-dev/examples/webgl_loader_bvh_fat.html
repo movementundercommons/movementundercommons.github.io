@@ -67,7 +67,7 @@
 						// Each bone has a start point (its parent) and an end point.
 						if (bone.parent && bone.parent.isBone) {
 							vertices.push(0,0,0); vertices.push(0,0,0);
-							colors.push(1,1,1); colors.push(1,1,1);
+							colors.push(140/255,29/255,64/255); colors.push(255/255,198/255,39/255);
 						}
 					}
 
@@ -146,8 +146,8 @@
 
 				scene = new THREE.Scene();
 
-				scene.background = new THREE.Color(0xFFC627);
-				scene.add( new THREE.GridHelper(400, 10 ,0xffffff, 0xffffff));
+				scene.background = new THREE.Color(0x000000);
+				scene.add( new THREE.GridHelper(400, 15 ,0xffffff, 0xffffff));
 
 				const loader = new BVHLoader();
 				loader.load("models/bvh/motionbuilder-format.bvh", function (result) {
@@ -167,6 +167,7 @@
           action = mixer.clipAction(result.clip)
 					action.setEffectiveWeight(1.0).play();
 				});
+
 				// renderer
 				renderer = new THREE.WebGLRenderer({antialias: true});
 				renderer.setPixelRatio(window.devicePixelRatio);

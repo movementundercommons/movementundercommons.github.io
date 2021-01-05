@@ -88,7 +88,9 @@ function loadFile(filename, callback)
         </ul>
 
         <div class="nav-header center">
-          <h1 style='text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);'>
+          <h1 style='text-shadow: 2px 4px 3px  0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);'>
             MOVEMENT <br> UNDERCOMMONS</h1>
           <div style='text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);font-size: 20px;margin-top:20px;text-transform:uppercase'
             class="tagline">A Motion Capture Repository</div>
@@ -160,11 +162,25 @@ function loadFile(filename, callback)
         '</div>'+
       '</div>'+
       '<div class="gallery-action">'+
-        '<a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">play_arrow</i></a>'+
+        '<button onclick="doFullScreen(event)" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">play_arrow</i></button>'+
       '</div>'+
     '</div>'+
     '<div class="itemCover"></div>'
 
+  function doFullScreen(e)
+  {
+    $(e.target).closest(".gallery-item").find("iframe").addClass("fullscreen");
+    $(e.target).closest(".gallery-item").find(".gallery-action").fadeOut(0);
+    $("#placeholder-navbar").fadeOut(0);
+  }
+
+  function minFullScreen()
+  {
+    $("iframe").removeClass("fullscreen");
+    $(".active .gallery-action").fadeIn(0);
+    $("#placeholder-navbar").fadeIn(0);
+
+  }
 
   var app;
   var appt;
@@ -217,6 +233,12 @@ body,html{
   }
   .lighten {
     background-color: rgb(53,53,53) !important;
+  }
+  .fullscreen.responsive-iframe{
+    position:fixed;
+    top:0;
+    left:0;
+    height: 100vh;
   }
   .responsive-iframe{
     width: 100%;
