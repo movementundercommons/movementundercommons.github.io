@@ -134,6 +134,10 @@ function loadFile(filename, callback)
     </div><!-- /.container -->
 
 
+    <button onclick="minFullScreen(event)" id='closeButton' style='
+        position:fixed;top:10px;right:10px;z-index:999999;display:none;
+      ' class="btn-floating btn-large waves-effect waves-light active"><i class="material-icons" style="background:#FFC627;color:black">close</i></button>
+
     <!-- Core Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="res/frontpage/js/imagesloaded.pkgd.min.js"></script>
@@ -176,10 +180,12 @@ function loadFile(filename, callback)
     $(e.target).closest(".gallery-item").find(".gallery-cover").addClass("fullscreen");
     $(e.target).closest(".gallery-item").find(".gallery-action").fadeOut(0);
     $("#placeholder-navbar").fadeOut(0);
+    $("#closeButton").fadeIn(100);
   }
 
   function minFullScreen()
   {
+    $("#closeButton").fadeOut(100);
     $(".gallery-item .gallery-cover").removeClass("fullscreen");
     $(".gallery-item .gallery-action").fadeIn(0);
     $("#placeholder-navbar").fadeIn(0);
