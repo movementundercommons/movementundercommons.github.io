@@ -167,8 +167,12 @@ function loadFile(filename, callback)
     '</div>'+
     '<div class="itemCover"></div>'
 
+
+  var styleT = ""
   function doFullScreen(e)
   {
+    styleT = $(e.target).closest(".gallery-item").find(".gallery-cover").attr("style");
+    $(e.target).closest(".gallery-item").find(".gallery-cover")[0].style = "position:absolute;width:100%;height:100%;left:0;top:0;margin-left:0"
     $(e.target).closest(".gallery-item").find(".gallery-cover").addClass("fullscreen");
     $(e.target).closest(".gallery-item").find(".gallery-action").fadeOut(0);
     $("#placeholder-navbar").fadeOut(0);
@@ -179,6 +183,7 @@ function loadFile(filename, callback)
     $(".gallery-item .gallery-cover").removeClass("fullscreen");
     $(".gallery-item .gallery-action").fadeIn(0);
     $("#placeholder-navbar").fadeIn(0);
+    $(".gallery-item .gallery-cover.static")[0].style =  styleT
 
   }
 
@@ -240,8 +245,7 @@ body,html{
     left:0;
     min-height: 100vh;
     min-width:100vw;
-    margin-left:-40px;
-    margin-top:-40px;
+    transform: scale(1);
   }
   .fullscreen.gallery-cover.static iframe{
     min-height:100vh;
@@ -281,6 +285,9 @@ body,html{
   .placeholder{
     border-radius: 24px;
     overflow: hidden;
+  }
+  .gallery-curve-wrapper{
+    position:relative;
   }
 </style>
 </html>
