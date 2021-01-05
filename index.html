@@ -176,7 +176,7 @@ function loadFile(filename, callback)
   function doFullScreen(e)
   {
     styleT = $(e.target).closest(".gallery-item").find(".gallery-cover").attr("style");
-    $(e.target).closest(".gallery-item").find(".gallery-cover")[0].style = "position:absolute;width:100%;height:100%;left:0;top:0;margin-left:0"
+    $(e.target).closest(".gallery-item").find(".gallery-cover")[0].style = "position:absolute;width:100%;height:100%;left:0;top:0;margin-left:0;transition:0s"
     $(e.target).closest(".gallery-item").find(".gallery-cover").addClass("fullscreen");
     $(e.target).closest(".gallery-item").find(".gallery-action").fadeOut(0);
     $("#placeholder-navbar").fadeOut(0);
