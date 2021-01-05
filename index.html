@@ -136,7 +136,7 @@ function loadFile(filename, callback)
 
     <button onclick="minFullScreen(event)" id='closeButton' style='
         position:fixed;top:10px;right:10px;z-index:999999;display:none;
-      ' class="btn-floating btn-large waves-effect waves-light active"><i class="material-icons" style="background:#FFC627;color:black">close</i></button>
+      ' class="btn-floating btn-large waves-effect waves-light active"><i class="material-icons" style="background:#FFC627;color:black">fullscreen_exit</i></button>
 
     <!-- Core Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -166,7 +166,7 @@ function loadFile(filename, callback)
         '</div>'+
       '</div>'+
       '<div class="gallery-action">'+
-        '<button onclick="doFullScreen(event)" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">play_arrow</i></button>'+
+        '<button onclick="doFullScreen(event)" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">fullscreen</i></button>'+
       '</div>'+
     '</div>'+
     '<div class="itemCover"></div>'
@@ -262,6 +262,7 @@ body,html{
     width: 100%;
     height: 35vh;
     border:none;
+    background:black;
   }
   nav#placeholder-navbar .nav-wrapper{
     background: #121212;
