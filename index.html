@@ -169,15 +169,15 @@ function loadFile(filename, callback)
 
   function doFullScreen(e)
   {
-    $(e.target).closest(".gallery-item").find("iframe").addClass("fullscreen");
+    $(e.target).closest(".gallery-item").find(".gallery-cover").addClass("fullscreen");
     $(e.target).closest(".gallery-item").find(".gallery-action").fadeOut(0);
     $("#placeholder-navbar").fadeOut(0);
   }
 
   function minFullScreen()
   {
-    $("iframe").removeClass("fullscreen");
-    $(".active .gallery-action").fadeIn(0);
+    $(".gallery-item .gallery-cover").removeClass("fullscreen");
+    $(".gallery-item .gallery-action").fadeIn(0);
     $("#placeholder-navbar").fadeIn(0);
 
   }
@@ -234,12 +234,20 @@ body,html{
   .lighten {
     background-color: rgb(53,53,53) !important;
   }
-  .fullscreen.responsive-iframe{
-    position:fixed;
+  .fullscreen.gallery-cover.static{
+    position:absolute;
     top:0;
     left:0;
-    height: 100vh;
+    min-height: 100vh;
+    min-width:100vw;
+    margin-left:-40px;
+    margin-top:-40px;
   }
+  .fullscreen.gallery-cover.static iframe{
+    min-height:100vh;
+    width:100vw;
+  }
+
   .responsive-iframe{
     width: 100%;
     height: 35vh;
