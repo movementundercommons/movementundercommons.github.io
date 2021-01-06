@@ -4,9 +4,8 @@
     "uuid": "b108f105-3aa3-45c4-ae12-05cbc8ba9614",
     "title": "upper body 1",
     "tags": [
-        "1",
         "biomechanics",
-        "range of motion test"
+        "range_of_motion_test"
     ],
     "measured": "2020-02-07T18:23:37.320000Z",
     "bones": [

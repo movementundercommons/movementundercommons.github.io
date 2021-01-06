@@ -100,11 +100,8 @@ function loadFile(filename, callback)
       <!-- Fixed Masonry Filters -->
       <div class="categories-wrapper lighten">
         <div class="categories-container">
-          <ul class="categories container">
+          <ul class="categories container" id='theTags'>
             <li class="active"><a href="#all">All</a></li>
-            <li><a href="#polygon">Polygon</a></li>
-            <li><a href="#bigbang">Big Bang</a></li>
-            <li><a href="#sacred">Sacred Geometry</a></li>
           </ul>
         </div>
       </div>
@@ -295,29 +292,48 @@ function loadFile(filename, callback)
           itemMarkup + '</div>';
       }
       document.getElementById("theGallery").innerHTML = mu;
+      var tags = Object.keys(app.tags);
+      var tmu = '<li class="active"><a href="#all">All</a></li>';
+      for(var i = 0; i < tags.length; i++){
+        tmu+='<li class=""><a href="#'+ tags[i]+ '">'+ app.tags[tags[i]].name+ '</a></li>'
+      }
+      document.getElementById("theTags").innerHTML = tmu;
+
       init()
+
       for(var i = 0; i < mcs.length; i++){
-        var infoFile = app.mocaps[mcs[i]].info;
+        var infoFile = app.mocaps[mcs[i]].meta;
         function y(c, x){
          loadFile("data/files/"+ mcs[c] + "/" + x, function(data){
            var obj = JSON.parse(data);
            var csv = app.mocaps[mcs[c]].csv;
            var bvh = app.mocaps[mcs[c]].bvh;
            var fbx = app.mocaps[mcs[c]].fbx;
+           var duration = obj.frame_count + " frames (" + obj.frame_count / obj.frequency + " secs)"
+           var desc = obj.description || "<i>No Description</i>"
+           var tags = obj.tags
+           var tmu = "";
+           for(var i = 0; i < tags.length; i++){
+             tmu+= "<b>" + app.tags[tags[i]].name + "</b>"
+           }
 
            var dmu = "";
            if(csv){
-            dmu += '<a href="./data/files/' + mcs[c] + '/' + csv + '" download="' + mcs[c] + '-csv.zip" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn">Download CSV</a>';
+            dmu += '<a href="./data/files/' + mcs[c] + '/' + csv + '" download="' + mcs[c] + '-csv.zip" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn"><i class="material-icons left">download</i>CSV</a>';
            }
            if(bvh){
-            dmu += '<a href="./data/files/' + mcs[c] + '/' + bvh + '" download="' + mcs[c] + '.bvh" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn">Download BVH</a>';
+            dmu += '<a href="./data/files/' + mcs[c] + '/' + bvh + '" download="' + mcs[c] + '.bvh" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn"><i class="material-icons left">download</i>BVH</a>';
            }
            if(fbx){
-            dmu += '<a href="./data/files/' + mcs[c] + '/' + fbx + '" download="' + mcs[c] + '.fbx" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn">Download FBX</a>';
+            dmu += '<a href="./data/files/' + mcs[c] + '/' + fbx + '" download="' + mcs[c] + '.fbx" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn"><i class="material-icons left">download</i>FBX</a>';
            }
            $("#item_" + mcs[c] + " .title-wrapper h3").html(obj.title)
            $("#item_" + mcs[c] + " .gallery-header span").html(obj.title)
            $("#item_" + mcs[c] + " .download").html(dmu)
+           $("#item_" + mcs[c] + " .description").html(desc)
+           $("#item_" + mcs[c] + " .price.duration").html(duration);
+           $("#item_" + mcs[c] + " .price.tags").html(tmu);
+           $("#item_" + mcs[c]).addClass(tags.join(" "))
           console.log(c, data);
          })
         }
@@ -413,6 +429,17 @@ body,html{
   }
   .download a {
     margin-right:20px;
+  }
+  .price.tags {
+    margin-top:10px;
+    display:block;
+  }
+  .price.tags b{
+    border-radius: 20px;
+    border: 1px solid;
+    margin-right: 2px;
+    text-decoration:regular;
+    padding: 2px 5px;
   }
 </style>
 </html>

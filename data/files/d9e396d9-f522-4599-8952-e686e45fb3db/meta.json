@@ -11,9 +11,8 @@
     ],
     "frequency": 20.0,
     "tags": [
-        "1",
         "biomechanics",
-        "range of motion test"
+        "range_of_motion_test"
     ],
     "uuid": "d9e396d9-f522-4599-8952-e686e45fb3db",
     "frame_count": 399
