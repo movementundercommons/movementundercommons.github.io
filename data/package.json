@@ -4,17 +4,20 @@
   "mocaps":{
     "d9e396d9-f522-4599-8952-e686e45fb3db":{
       "info":"package.json",
-      "csv": "csv",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
     },
     "014d1638-04f8-40d1-b051-672b16f18191":{
       "info":"package.json",
-      "csv": "csv",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
     },
     "b108f105-3aa3-45c4-ae12-05cbc8ba9614":{
       "info":"package.json",
-      "csv": "csv",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
     }
   },

@@ -110,13 +110,6 @@ function loadFile(filename, callback)
       </div>
     </nav>
     <ul class="side-nav" id="nav-mobile">
-      <li class="active"><a href="index.html"><i class="material-icons">camera</i>Gallery</a></li>
-      <li><a href="index-dark.html"><i class="material-icons">brightness_3</i>Dark Theme</a></li>
-      <li><a href="blog.html"><i class="material-icons">edit</i>Blog</a></li>
-      <li><a href="docs.html"><i class="material-icons">school</i>Docs</a></li>
-      <li><a href="full-header.html"><i class="material-icons">fullscreen</i>Fullscreen Header</a></li>
-      <li><a href="horizontal.html"><i class="material-icons">swap_horiz</i>Horizontal Style</a></li>
-      <li><a href="no-image.html"><i class="material-icons">texture</i>No Image Expand</a></li>
     </ul>
 
     <!-- Gallery -->
@@ -136,7 +129,7 @@ function loadFile(filename, callback)
 
     <button onclick="minFullScreen(event)" id='closeButton' style='
         position:fixed;top:10px;right:10px;z-index:999999;display:none;
-      ' class="btn-floating btn-large waves-effect waves-light active"><i class="material-icons" style="background:#FFC627;color:black">fullscreen_exit</i></button>
+      ' class="btn-floating btn-large waves-effect waves-light active"><i class="material-icons" style="background:#FFC627;color:#8C1D40">fullscreen_exit</i></button>
 
     <!-- Core Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -171,7 +164,7 @@ function loadFile(filename, callback)
         '</div>'+
       '</div>'+
       '<div class="gallery-action">'+
-        '<button onclick="doFullScreen(event)" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:black">fullscreen</i></button>'+
+        '<button onclick="doFullScreen(event)" class="btn-floating btn-large waves-effect waves-light"><i class="material-icons" style="background:#FFC627;color:#8C1D40">fullscreen</i></button>'+
       '</div>'+
     '</div>'+
     '<div class="itemCover"></div>'
@@ -308,8 +301,23 @@ function loadFile(filename, callback)
         function y(c, x){
          loadFile("data/files/"+ mcs[c] + "/" + x, function(data){
            var obj = JSON.parse(data);
+           var csv = app.mocaps[mcs[c]].csv;
+           var bvh = app.mocaps[mcs[c]].bvh;
+           var fbx = app.mocaps[mcs[c]].fbx;
+
+           var dmu = "";
+           if(csv){
+            dmu += '<a href="./data/files/' + mcs[c] + '/' + csv + '" download="' + mcs[c] + '-csv.zip" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn">Download CSV</a>';
+           }
+           if(bvh){
+            dmu += '<a href="./data/files/' + mcs[c] + '/' + bvh + '" download="' + mcs[c] + '.bvh" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn">Download BVH</a>';
+           }
+           if(fbx){
+            dmu += '<a href="./data/files/' + mcs[c] + '/' + fbx + '" download="' + mcs[c] + '.fbx" style="color:#8C1D40;background:#FFC627" class="waves-effect waves-light btn">Download FBX</a>';
+           }
            $("#item_" + mcs[c] + " .title-wrapper h3").html(obj.title)
            $("#item_" + mcs[c] + " .gallery-header span").html(obj.title)
+           $("#item_" + mcs[c] + " .download").html(dmu)
           console.log(c, data);
          })
         }
@@ -402,6 +410,9 @@ body,html{
     height:auto;
     margin-bottom:20px;
     text-align:right;
+  }
+  .download a {
+    margin-right:20px;
   }
 </style>
 </html>
