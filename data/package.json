@@ -1,5 +1,5 @@
-{ 
-  "id":"moveUnder", 
+{
+  "id":"moveUnder",
   "version":"1.0.0",
   "mocaps":{
     "d9e396d9-f522-4599-8952-e686e45fb3db":{
@@ -19,6 +19,12 @@
       "csv": "csv.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
+    },
+    "1ada3463-9bc8-4683-99b9-0cb83b91a8d1":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
     }
   },
   "tags":{
@@ -32,4 +38,3 @@
      }
   }
 }
-
