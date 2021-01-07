@@ -301,6 +301,17 @@ function loadFile(filename, callback)
 
       init()
 
+inView('.gallery-item')
+    .on('enter', el => {
+        console.log("enter", el)
+    })
+    .on('exit', el => {
+    console.log("exit", el)
+    });
+
+
+
+
       for(var i = 0; i < mcs.length; i++){
         var infoFile = app.mocaps[mcs[i]].meta;
         function y(c, x){
