@@ -1,0 +1,19 @@
+{
+    "measured": "2020-02-07T18:19:28.777000Z",
+    "title": "uppper body 1",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "LeftForeArm",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightUpperArm"
+    ],
+    "frequency": 20.0,
+    "tags": [
+        "biomechanics",
+        "range_of_motion_test"
+    ],
+    "uuid": "cff6472b-9567-4010-aee7-b2fc69ecae56",
+    "frame_count": 397
+}
