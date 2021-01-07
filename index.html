@@ -142,7 +142,7 @@ function loadFile(filename, callback)
   var itemMarkup =
     '<div class="gallery-curve-wrapper">'+
       '<a class="gallery-cover gray" style="display:block;box-shadow:none">'+
-        '<iframe style="background:black" class="responsive-img responsive-iframe" src="./res/bvhplayer/three.js-dev/examples/empty.html" alt="placeholder"></iframe>'+
+        '<iframe style="background:black;overflow:hidden" scrolling="no" class="responsive-img responsive-iframe" src="./res/bvhplayer/three.js-dev/examples/empty.html" alt="placeholder"></iframe>'+
       '</a>'+
       '<div class="gallery-header" style="background-color:#000000;color:#FFC627;">'+
         '<span>__TITLE__</span>'+
@@ -303,12 +303,10 @@ function loadFile(filename, callback)
 
 inView('.gallery-item')
     .on('enter', el => {
-        console.log("enter", el)
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#"+el.dataset.bvh);
     })
     .on('exit', el => {
-    console.log("exit", el)
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/empty.html");
     });
@@ -354,7 +352,6 @@ inView('.gallery-item')
               $("#item_" + mcs[c] + " iframe").attr("src",
                 "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#./data/files/"+mcs[c]+"/"+bvh);
            }
-          console.log(c, data);
          })
         }
         y(i, infoFile);
@@ -459,6 +456,7 @@ body,html{
     border-radius: 20px;
     border: 1px solid;
     margin-right: 2px;
+    margin-bottom: 5px;
     text-decoration:regular;
     padding: 2px 5px;
   }
