@@ -303,12 +303,18 @@ function loadFile(filename, callback)
 
 inView('.gallery-item')
     .on('enter', el => {
+      function y(){
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#"+el.dataset.bvh);
+      }
+      setTimeout(y, 50);
     })
     .on('exit', el => {
+      function y(){
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/empty.html");
+      }
+      setTimeout(y, 50);
     });
 
 
