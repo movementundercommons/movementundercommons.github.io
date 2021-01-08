@@ -312,7 +312,8 @@ inView('.gallery-item')
     .on('exit', el => {
       function y(){
         $(el).find("iframe").attr("src",
-        "./res/bvhplayer/three.js-dev/examples/empty.html");
+        "");
+    //    "./res/bvhplayer/three.js-dev/examples/empty.html");
       }
       setTimeout(y, 50);
     });
