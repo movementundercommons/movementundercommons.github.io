@@ -74,7 +74,7 @@ function loadFile(filename, callback)
   <body onload='start()'>
 
     <!-- Navbar and Header -->
-    <nav class="nav-extended">
+    <nav style='background-color:black' class="nav-extended">
       <div class="nav-background" style='background-color:transparent'>
         <div class="pattern active" style=";"></div>
       </div>
@@ -307,7 +307,7 @@ inView('.gallery-item')
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#"+el.dataset.bvh);
       }
-      setTimeout(y, 50);
+      setTimeout(y, 350);
     })
     .on('exit', el => {
       function y(){
@@ -315,7 +315,7 @@ inView('.gallery-item')
         "");
     //    "./res/bvhplayer/three.js-dev/examples/empty.html");
       }
-      setTimeout(y, 50);
+      setTimeout(y, 350);
     });
 
 
@@ -356,8 +356,10 @@ inView('.gallery-item')
            $("#item_" + mcs[c] + "").attr("data-bvh", "./data/files/" + mcs[c] + "/" + bvh)
            $("#item_" + mcs[c]).addClass(tags.join(" "))
            if(c<9){
+             setTimeout(function(){
               $("#item_" + mcs[c] + " iframe").attr("src",
                 "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#./data/files/"+mcs[c]+"/"+bvh);
+             },500);
            }
          })
         }
