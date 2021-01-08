@@ -1,6 +1,6 @@
 {
-    "measured": "2020-02-07T18:19:28.501000Z",
-    "title": "upper body 1",
+    "measured": "2020-02-07T18:05:03.713000Z",
+    "title": "upper body",
     "bones": [
         "ChestBottom",
         "Head",
@@ -14,6 +14,6 @@
         "biomechanics",
         "range_of_motion_test"
     ],
-    "uuid": "0efad335-948e-4e8f-8db6-58d69161c16a",
-    "frame_count": 398
+    "uuid": "411b451a-c8de-48f6-a46f-ffdd0d0d5486",
+    "frame_count": 399
 }
