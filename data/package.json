@@ -145,8 +145,13 @@
       "csv": "csv.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
+    },
+    "cba9870d-7b20-444e-9f57-d25946fa46bc":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
     }
-
   },
   "tags":{
      "biomechanics":{
