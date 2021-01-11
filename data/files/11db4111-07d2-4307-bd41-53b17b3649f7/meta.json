@@ -1,0 +1,15 @@
+{
+    "measured": "2019-11-11T22:30:26.559000Z",
+    "title": "Upper body",
+    "bones": [
+        "ChestBottom",
+        "LeftForeArm",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightUpperArm"
+    ],
+    "frequency": 20.0,
+    "tags": [],
+    "uuid": "11db4111-07d2-4307-bd41-53b17b3649f7",
+    "frame_count": 399
+}
