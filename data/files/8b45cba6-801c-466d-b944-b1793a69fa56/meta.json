@@ -1,0 +1,16 @@
+{
+    "uuid": "8b45cba6-801c-466d-b944-b1793a69fa56",
+    "frequency": 40.0,
+    "measured": "2019-11-06T02:45:56.304000Z",
+    "title": "Upper body (with hip)",
+    "bones": [
+        "ChestBottom",
+        "Hip",
+        "LeftForeArm",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightUpperArm"
+    ],
+    "tags": [],
+    "frame_count": 398
+}
