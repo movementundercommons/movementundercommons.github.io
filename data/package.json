@@ -271,9 +271,19 @@
       "csv": "csv.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
+    },
+    "876f3bb6-e446-4772-aade-f91eae43ba04":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "a684b1cb-8876-4626-82e5-70b53b0146a3":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
     }
-
-
   },
   "tags":{
      "biomechanics":{
