@@ -1,0 +1,21 @@
+{
+    "measured": "2019-11-18T18:36:26.979000Z",
+    "title": "8 notches",
+    "bones": [
+        "ChestBottom",
+        "Hip",
+        "LeftForeArm",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "frequency": 20.0,
+    "tags": [
+        "biomechanics",
+        "range_of_motion_test"
+    ],
+    "uuid": "7e1d5e1c-6f4e-4c84-a236-f936695cefd6",
+    "frame_count": 398
+}

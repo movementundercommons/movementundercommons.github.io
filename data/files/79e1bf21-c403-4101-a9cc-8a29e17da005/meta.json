@@ -1,0 +1,23 @@
+{
+    "measured": "2019-11-22T21:37:46.789000Z",
+    "title": "ten",
+    "bones": [
+        "ChestBottom",
+        "Hip",
+        "LeftForeArm",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "frequency": 20.0,
+    "tags": [
+        "biomechanics",
+        "range_of_motion_test"
+    ],
+    "uuid": "79e1bf21-c403-4101-a9cc-8a29e17da005",
+    "frame_count": 397
+}

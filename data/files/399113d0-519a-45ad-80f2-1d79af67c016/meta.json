@@ -1,0 +1,21 @@
+{
+    "measured": "2019-11-18T17:15:24.575000Z",
+    "title": "Full body + head",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "frequency": 40.0,
+    "tags": [],
+    "uuid": "399113d0-519a-45ad-80f2-1d79af67c016",
+    "frame_count": 399
+}

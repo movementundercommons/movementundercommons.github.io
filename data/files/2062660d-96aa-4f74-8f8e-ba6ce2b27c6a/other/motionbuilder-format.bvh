@@ -1,0 +1,176 @@
+HIERARCHY
+ROOT Root
+{
+	OFFSET 0.00000 0.00000 0.00000
+	CHANNELS 6 Xposition Yposition Zposition Zrotation Xrotation Yrotation
+	JOINT Hips
+	{
+		OFFSET 0 0 0	
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT Spine
+		{
+			OFFSET 0 4 0	
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT Spine1
+			{
+				OFFSET 0 19.4 0	
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT Spine2
+				{
+					OFFSET 0 16.6 0	
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					JOINT LeftCollar
+					{
+						OFFSET 0 10 0	
+						CHANNELS 3 Zrotation Xrotation Yrotation
+						JOINT LeftArm
+						{
+							OFFSET 15.6 -2 3	
+							CHANNELS 3 Zrotation Xrotation Yrotation
+							JOINT LeftForeArm
+							{
+								OFFSET 3.5 -27 -1	
+								CHANNELS 3 Zrotation Xrotation Yrotation
+								JOINT LeftHand
+								{
+									OFFSET 1 -27 1	
+									CHANNELS 3 Zrotation Xrotation Yrotation
+									End Site
+									{
+										OFFSET 0 -15 0
+									}
+								}
+							}
+						}
+					}
+					JOINT RightCollar
+					{
+						OFFSET 0 10 0	
+						CHANNELS 3 Zrotation Xrotation Yrotation
+						JOINT RightArm
+						{
+							OFFSET -15.6 -2 3	
+							CHANNELS 3 Zrotation Xrotation Yrotation
+							JOINT RightForeArm
+							{
+								OFFSET -3.5 -27 -1	
+								CHANNELS 3 Zrotation Xrotation Yrotation
+								JOINT RightHand
+								{
+									OFFSET -1 -27 1	
+									CHANNELS 3 Zrotation Xrotation Yrotation
+									End Site
+									{
+										OFFSET 0 -15 0
+									}
+								}
+							}
+						}
+					}
+					JOINT Neck
+					{
+						OFFSET 0 10 0	
+						CHANNELS 3 Zrotation Xrotation Yrotation
+						JOINT Head
+						{
+							OFFSET 0 12.7 3	
+							CHANNELS 3 Zrotation Xrotation Yrotation
+							End Site
+							{
+								OFFSET 0 12.7 3
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	JOINT LeftHip
+	{
+		OFFSET 0 0 0	
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT LeftUpLeg
+		{
+			OFFSET 8.8 -6 0	
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT LeftLeg
+			{
+				OFFSET 0 -39 2	
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT LeftFoot
+				{
+					OFFSET 0 -43 -2	
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					JOINT LeftFootFront
+					{
+						OFFSET 0 -7 8.5	
+						CHANNELS 3 Zrotation Xrotation Yrotation
+						End Site
+						{
+							OFFSET 0 -0.5 9
+						}
+					}
+				}
+				JOINT LeftHeel
+				{
+					OFFSET 0 -43 -2	
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					End Site
+					{
+						OFFSET 0 -7.5 -5
+					}
+				}
+			}
+		}
+	}
+	JOINT RightHip
+	{
+		OFFSET 0 0 0	
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT RightUpLeg
+		{
+			OFFSET -8.8 -6 0	
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT RightLeg
+			{
+				OFFSET 0 -39 2	
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				JOINT RightFoot
+				{
+					OFFSET 0 -43 -2	
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					JOINT RightFootFront
+					{
+						OFFSET 0 -7 8.5	
+						CHANNELS 3 Zrotation Xrotation Yrotation
+						End Site
+						{
+							OFFSET 0 -0.5 9
+						}
+					}
+				}
+				JOINT RightHeel
+				{
+					OFFSET 0 -43 -2	
+					CHANNELS 3 Zrotation Xrotation Yrotation
+					End Site
+					{
+						OFFSET 0 -7.5 -5
+					}
+				}
+			}
+		}
+	}
+}
+MOTION
+Frames: 9
+Frame Time: 0.025
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6092 -2.1039 -3.4078 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6201 -2.1153 -3.3957 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6264 -2.1416 -3.3799 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.622 -2.167 -3.3545 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6166 -2.16 -3.3156 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6189 -2.1381 -3.262 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6224 -2.1256 -3.2052 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.6157 -2.1189 -3.1568 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 
+0 95.5 0 -0 0 -0 -0 0 -0 -0 0 -0 -2.5981 -2.1039 -3.1146 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 -0 0 -0 

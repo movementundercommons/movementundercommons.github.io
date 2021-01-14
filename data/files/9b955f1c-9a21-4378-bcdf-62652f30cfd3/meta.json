@@ -1,0 +1,11 @@
+{
+    "measured": "2019-11-11T20:47:00.284000Z",
+    "title": "Chest(test)",
+    "bones": [
+        "ChestBottom"
+    ],
+    "frequency": 40.0,
+    "tags": [],
+    "uuid": "9b955f1c-9a21-4378-bcdf-62652f30cfd3",
+    "frame_count": 399
+}

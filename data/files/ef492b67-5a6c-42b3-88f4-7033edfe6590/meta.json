@@ -1,0 +1,22 @@
+{
+    "measured": "2019-11-22T21:37:46.852000Z",
+    "title": "9notch test",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "frequency": 20.0,
+    "tags": [
+        "biomechanics",
+        "range_of_motion_test"
+    ],
+    "uuid": "ef492b67-5a6c-42b3-88f4-7033edfe6590",
+    "frame_count": 399
+}
