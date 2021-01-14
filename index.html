@@ -293,7 +293,7 @@ function loadFile(filename, callback)
       var mcs = Object.keys(app.mocaps);
       for(var i = 0; i < mcs.length; i++){
         mu += 
-  '<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter __TAGS__" data-count="'+ i +'" data-bvh="__BVHFILE__" id="item_' + mcs[i]+ '">'+
+  '<div class="col l6 m6 s12 gallery-item gallery-expand gallery-filter __TAGS__" data-count="'+ i +'" data-bvh="__BVHFILE__" id="item_' + mcs[i]+ '">'+
           itemMarkup + '</div>';
       }
       document.getElementById("theGallery").innerHTML = mu;
@@ -365,7 +365,7 @@ setTimeout(function (){
            $("#item_" + mcs[c] + " .price.tags").html(tmu);
            $("#item_" + mcs[c] + "").attr("data-bvh", "./data/files/" + mcs[c] + "/" + bvh)
            $("#item_" + mcs[c]).addClass(tags.join(" "))
-           if(c<6){
+           if(c<4){
              setTimeout(function(){
               $("#item_" + mcs[c] + " iframe").attr("src",
                 "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#./data/files/"+mcs[c]+"/"+bvh);
