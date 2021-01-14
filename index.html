@@ -13,6 +13,10 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
     <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/activity-indicator-material@1.0.2/ac.js'></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/activity-indicator-material@1.0.2/ac.css'>
+
+
     <!-- Stylesheet -->
     <link href="res/frontpage/css/gallery-materialize.min.css" rel="stylesheet">
 
@@ -141,8 +145,9 @@ function loadFile(filename, callback)
   <script>
   var itemMarkup =
     '<div class="gallery-curve-wrapper">'+
+        '<svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" style=""> <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle> </svg>'+
       '<a class="gallery-cover gray" style="display:block;box-shadow:none">'+
-        '<iframe style="background:black;overflow:hidden" scrolling="no" class="responsive-img responsive-iframe" src="./res/bvhplayer/three.js-dev/examples/empty.html" alt="placeholder"></iframe>'+
+        '<iframe style="background:transparent;overflow:hidden" scrolling="no" class="responsive-img responsive-iframe" src="./res/frontpage/empty.html" alt="placeholder"></iframe>'+
       '</a>'+
       '<div class="gallery-header" style="background-color:#000000;color:#FFC627;">'+
         '<span>__TITLE__</span>'+
@@ -306,16 +311,18 @@ inView('.gallery-item')
       function y(){
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#"+el.dataset.bvh);
+        $(el).find(".spinner").fadeOut(0);
       }
-      setTimeout(y, 350);
+      setTimeout(y, 30);
     })
     .on('exit', el => {
       function y(){
+        $(el).find(".spinner").fadeIn(0);
         $(el).find("iframe").attr("src",
         "");
-    //    "./res/bvhplayer/three.js-dev/examples/empty.html");
+      // "./res/frontpage/empty.html");
       }
-      setTimeout(y, 350);
+      setTimeout(y, 30);
     });
 
 
@@ -471,6 +478,13 @@ body,html{
     margin-bottom: 5px;
     text-decoration:regular;
     padding: 2px 5px;
+  }
+  .spinner{
+    position: absolute;
+    z-index: 99;
+    display: block;
+    margin-left: calc(50% - 35px);
+    margin-top: calc(50% - 50px);
   }
 </style>
 </html>
