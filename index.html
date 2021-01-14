@@ -18,7 +18,7 @@
 
 
     <!-- Stylesheet -->
-    <link href="res/frontpage/css/gallery-materialize.min.css" rel="stylesheet">
+    <link href="res/frontpage/css/gallery-materialize.css" rel="stylesheet">
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -103,7 +103,7 @@ function loadFile(filename, callback)
 
       <!-- Fixed Masonry Filters -->
       <div class="categories-wrapper lighten">
-        <div class="categories-container">
+        <div class="categories-container" style='z-index:9999'>
           <ul class="categories container" id='theTags'>
             <li class="active"><a href="#all">All</a></li>
           </ul>
@@ -306,7 +306,8 @@ function loadFile(filename, callback)
 
       init()
 
-inView('.gallery-item')
+setTimeout(function (){
+   inView('.gallery-item')
     .on('enter', el => {
       function y(){
         $(el).find("iframe").attr("src",
@@ -324,6 +325,8 @@ inView('.gallery-item')
       }
       setTimeout(y, 30);
     });
+
+}, 2000);
 
 
 
@@ -366,6 +369,7 @@ inView('.gallery-item')
              setTimeout(function(){
               $("#item_" + mcs[c] + " iframe").attr("src",
                 "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#./data/files/"+mcs[c]+"/"+bvh);
+                $("#item_" + mcs[c] + " .spinner").fadeOut(0);
              },500);
            }
          })
@@ -485,6 +489,9 @@ body,html{
     display: block;
     margin-left: calc(50% - 35px);
     margin-top: calc(50% - 50px);
+  }
+  .categories-container.pinned{
+    z-index:9999;
   }
 </style>
 </html>
