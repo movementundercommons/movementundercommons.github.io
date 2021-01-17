@@ -146,7 +146,7 @@
 				scene = new THREE.Scene();
 
 				scene.background = new THREE.Color(0x000000);
-				scene.add( new THREE.GridHelper(500, 15 ,0xffffff, 0xffffff));
+				scene.add( new THREE.GridHelper(500, 15 ,0x565656, 0x565656));
 
 				const loader = new BVHLoader();
 				loader.load("../../../../"+window.location.hash.replace("#",""), function (result) {
