@@ -13,8 +13,10 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
     <script src="https://cdn.jsdelivr.net/npm/in-view@0.6.1/dist/in-view.min.js"></script>
+
+
     <!-- Stylesheet -->
-    <link href="res/frontpage/css/gallery-materialize.min.css" rel="stylesheet">
+    <link href="res/frontpage/css/gallery-materialize.css" rel="stylesheet">
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -99,7 +101,7 @@ function loadFile(filename, callback)
 
       <!-- Fixed Masonry Filters -->
       <div class="categories-wrapper lighten">
-        <div class="categories-container">
+        <div class="categories-container" style='z-index:9999'>
           <ul class="categories container" id='theTags'>
             <li class="active"><a href="#all">All</a></li>
           </ul>
@@ -141,8 +143,9 @@ function loadFile(filename, callback)
   <script>
   var itemMarkup =
     '<div class="gallery-curve-wrapper">'+
+      '<div class="acind"></div>'+
       '<a class="gallery-cover gray" style="display:block;box-shadow:none">'+
-        '<iframe style="background:black;overflow:hidden" scrolling="no" class="responsive-img responsive-iframe" src="./res/bvhplayer/three.js-dev/examples/empty.html" alt="placeholder"></iframe>'+
+        '<iframe style="background:transparent;overflow:hidden" scrolling="no" class="responsive-img responsive-iframe" src="" alt="placeholder"></iframe>'+
       '</a>'+
       '<div class="gallery-header" style="background-color:#000000;color:#FFC627;">'+
         '<span>__TITLE__</span>'+
@@ -288,7 +291,7 @@ function loadFile(filename, callback)
       var mcs = Object.keys(app.mocaps);
       for(var i = 0; i < mcs.length; i++){
         mu += 
-  '<div class="col l4 m6 s12 gallery-item gallery-expand gallery-filter __TAGS__" data-count="'+ i +'" data-bvh="__BVHFILE__" id="item_' + mcs[i]+ '">'+
+  '<div style="background:transparent" class="col l6 m6 s12 gallery-item gallery-expand gallery-filter __TAGS__" data-count="'+ i +'" data-bvh="__BVHFILE__" id="item_' + mcs[i]+ '">'+
           itemMarkup + '</div>';
       }
       document.getElementById("theGallery").innerHTML = mu;
@@ -301,22 +304,27 @@ function loadFile(filename, callback)
 
       init()
 
-inView('.gallery-item')
+setTimeout(function (){
+   inView('.gallery-item')
     .on('enter', el => {
       function y(){
         $(el).find("iframe").attr("src",
         "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#"+el.dataset.bvh);
+        $(el).find(".acind").fadeOut(0);
       }
-      setTimeout(y, 350);
+      setTimeout(y, 10);
     })
     .on('exit', el => {
       function y(){
+        $(el).find(".acind").fadeIn(0);
         $(el).find("iframe").attr("src",
         "");
-    //    "./res/bvhplayer/three.js-dev/examples/empty.html");
+      // "./res/frontpage/empty.html");
       }
-      setTimeout(y, 350);
+      setTimeout(y, 10);
     });
+
+}, 200);
 
 
 
@@ -355,11 +363,12 @@ inView('.gallery-item')
            $("#item_" + mcs[c] + " .price.tags").html(tmu);
            $("#item_" + mcs[c] + "").attr("data-bvh", "./data/files/" + mcs[c] + "/" + bvh)
            $("#item_" + mcs[c]).addClass(tags.join(" "))
-           if(c<6){
+           if(c<4){
              setTimeout(function(){
               $("#item_" + mcs[c] + " iframe").attr("src",
                 "./res/bvhplayer/three.js-dev/examples/webgl_loader_bvh_fat.html#./data/files/"+mcs[c]+"/"+bvh);
-             },500);
+                $("#item_" + mcs[c] + " .acind").fadeOut(0);
+             },50);
            }
          })
         }
@@ -386,6 +395,7 @@ body,html{
     background-image: url('res/frontpage/img/header.jpg');
     background-position: 50%;
     background-size:cover;
+    z-index:9999;
   }
   .lighten {
     background-color: rgb(53,53,53) !important;
@@ -401,13 +411,16 @@ body,html{
   .fullscreen.gallery-cover.static iframe{
     min-height:100vh;
     width:100vw;
+    border-radius: 0px;
+    box-shadow: 0px 0px 2px;
   }
 
   .responsive-iframe{
+    border-radius: 24px;
     width: 100%;
     height: 35vh;
     border:none;
-    background:transparent;
+    background:black;
     background-image: url(res/frontpage/img/itembg/png);
   }
   nav#placeholder-navbar .nav-wrapper{
@@ -426,6 +439,7 @@ body,html{
     color:#FFC627;
     background-color: #000000;
     margin-top:-10px;
+    text-align:center;
   }
   .itemCover{
     position:absolute;
@@ -443,7 +457,8 @@ body,html{
   .placeholder{
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0px 0px 1px white;
+    background:black;
+    box-shadow: 0px 0px 2px white;
   }
   .gallery-curve-wrapper{
     position:relative;
@@ -471,6 +486,16 @@ body,html{
     margin-bottom: 5px;
     text-decoration:regular;
     padding: 2px 5px;
+  }
+  .acind{
+    position: absolute;
+    z-index: 99;
+    display: block;
+    margin-left: calc(50% - 35px);
+    margin-top: calc(50% - 50px);
+  }
+  .categories-container.pinned{
+    z-index:9999;
   }
 </style>
 </html>
