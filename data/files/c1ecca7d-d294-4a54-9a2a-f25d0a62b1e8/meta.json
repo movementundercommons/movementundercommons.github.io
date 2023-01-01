@@ -1,0 +1,29 @@
+{
+    "measured": "2021-06-11T15:01:21.190000Z",
+    "uuid": "c1ecca7d-d294-4a54-9a2a-f25d0a62b1e8",
+    "title": "full body 15",
+    "frequency": 20.0,
+    "frame_count": 2395,
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ],
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftFootTop",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightFootTop",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ]
+}
