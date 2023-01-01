@@ -1,0 +1,29 @@
+{
+    "frequency": 20.0,
+    "uuid": "086b1760-10de-46eb-be36-833a3df2cab1",
+    "measured": "2021-06-16T23:51:05.120000Z",
+    "frame_count": 2395,
+    "title": "Jess Burlesque 16 - 4",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftFootTop",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightFootTop",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}
