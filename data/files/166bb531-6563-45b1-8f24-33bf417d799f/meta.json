@@ -1,0 +1,23 @@
+{
+    "frequency": 20.0,
+    "uuid": "166bb531-6563-45b1-8f24-33bf417d799f",
+    "measured": "2021-06-10T19:18:47.445000Z",
+    "frame_count": 2396,
+    "title": "9 Basma Baklava 2",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}
