@@ -374,17 +374,23 @@
     },
     "685f9a19-e364-4c2c-b08c-d154f6950762":{
       "meta":"meta.json",
-      "csv": "csv.zip",
+      "csv": "CSV.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
       },
     "40c68d17-2685-4a05-862e-9bce91bb9843":{
       "meta":"meta.json",
-      "csv": "csv.zip",
+      "csv": "CSV.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
       },
     "a7662bc6-b144-4bc1-a5a6-d8767d799a4f":{
+      "meta":"meta.json",
+      "csv": "CSV.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "086b1760-10de-46eb-be36-833a3df2cab1":{
       "meta":"meta.json",
       "csv": "csv.zip",
       "fbx": "other/notch.fbx",
