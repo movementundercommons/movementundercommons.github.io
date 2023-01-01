@@ -383,6 +383,12 @@
       "csv": "csv.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
+      },
+    "a7662bc6-b144-4bc1-a5a6-d8767d799a4f":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
     }
    },
   "tags":{
