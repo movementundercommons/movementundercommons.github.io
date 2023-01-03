@@ -1,0 +1,23 @@
+{
+    "frequency": 20.0,
+    "uuid": "3cc2106d-4ecc-43c5-812a-41f4db9b5e9a",
+    "measured": "2021-05-06T22:31:27.551000Z",
+    "frame_count": 2390,
+    "title": "Nada upper body with hands",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "range of motion test",
+        "upper body with hands"
+    ]
+}

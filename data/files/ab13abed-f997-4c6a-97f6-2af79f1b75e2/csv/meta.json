@@ -1,0 +1,27 @@
+{
+    "frequency": 40.0,
+    "uuid": "ab13abed-f997-4c6a-97f6-2af79f1b75e2",
+    "measured": "2021-06-05T13:57:34.746000Z",
+    "frame_count": 9588,
+    "title": "Abdul tomatoes 2 - 13 full body no feet",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}

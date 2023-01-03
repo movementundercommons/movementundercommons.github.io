@@ -1,0 +1,27 @@
+{
+    "frequency": 20.0,
+    "uuid": "a70f57e7-f442-4f25-8a46-0b2e7302f2ab",
+    "measured": "2021-06-08T17:55:59.738000Z",
+    "frame_count": 2399,
+    "title": "full body no feet 13",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}

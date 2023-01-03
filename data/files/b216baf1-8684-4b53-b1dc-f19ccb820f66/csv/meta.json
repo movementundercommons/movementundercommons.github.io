@@ -1,0 +1,27 @@
+{
+    "frequency": 20.0,
+    "uuid": "b216baf1-8684-4b53-b1dc-f19ccb820f66",
+    "measured": "2021-06-05T15:15:39.462000Z",
+    "frame_count": 1198,
+    "title": "Hussein 13 no feet",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}

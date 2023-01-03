@@ -1,0 +1,27 @@
+{
+    "frequency": 20.0,
+    "uuid": "091c3bab-ae0e-461b-ab26-09d88a392e33",
+    "measured": "2021-06-08T17:22:53.375000Z",
+    "frame_count": 2399,
+    "title": "lav test 4",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}

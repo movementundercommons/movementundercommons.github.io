@@ -1,0 +1,27 @@
+{
+    "frequency": 20.0,
+    "uuid": "f059765a-6359-49fb-aef1-9de43cfa447b",
+    "measured": "2021-05-14T13:43:26.851000Z",
+    "frame_count": 4797,
+    "title": "full Abdul 13 eggplant",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "m",
+        "range of motion test"
+    ]
+}

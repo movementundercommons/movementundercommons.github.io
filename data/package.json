@@ -431,7 +431,186 @@
       "csv": "csv.zip",
       "fbx": "other/notch.fbx",
       "bvh": "other/motionbuilder-format.bvh"
+      },
+    "82a1c5d5-e148-4564-97e4-253b8bab0b67":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "a70f57e7-f442-4f25-8a46-0b2e7302f2ab":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "bed47d96-e5f3-4def-9706-6aec4dfe2f98":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "091c3bab-ae0e-461b-ab26-09d88a392e33":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "e5a4f022-359a-4002-8b98-0c48fcded051":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "b216baf1-8684-4b53-b1dc-f19ccb820f66":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+      },
+    "a036f2bc-8683-4d81-8195-e9b256b83870":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "4af1b2a2-1f9c-49e8-92a5-ffb28f13e213":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "ab13abed-f997-4c6a-97f6-2af79f1b75e2":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "ac1686d7-876b-4e77-832d-02412659e33a":{
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "f059765a-6359-49fb-aef1-9de43cfa447b":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "64330a03-e2be-4d17-8fdb-7388890e6834":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "6bfda5b8-3c19-452c-a2bb-4962304ad0f9":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "893ee9cf-1427-46c9-bebe-bd1c5e29d560":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "29b1c8c9-1b80-4c80-b93f-83007d9f4bb1":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "b2ca8437-1708-44ea-bfc8-6d0baead32c1":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "986afee0-98db-437f-8993-f0271b1b7227":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "3cc2106d-4ecc-43c5-812a-41f4db9b5e9a":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "c0a6107d-a591-456d-af42-53c44997c7e3":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "e24fa2e5-fdc6-4aa7-86bc-f7726df1b4a0":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "f1c17c20-d63b-435f-96da-0d741c32e993":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "265606cc-f8e9-429a-9660-c936b4d6be4e":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "e8cc1eb0-2bff-4e01-a44a-fdbb56460d09":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "ceaf69be-dd46-4115-9192-e0d83b066ab0":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "0fd3f173-22e0-4df2-a062-9327198f4488":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "5f0ad1a8-25bf-4054-ab8a-7bc7a586f3cc":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "2049ac30-9fb5-4de4-a44c-e15f4174b5a0":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "d5a8f5f1-bc00-4396-baa7-b74d12a0b61e":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "ea130991-23ad-4049-9da6-99b7d55cf993":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "9c84c2ee-42d7-42d0-8d6d-8dcf7befb8d0":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "87f3291f-bb9f-4d6e-91c9-c5fce5484f17":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "84d27bfa-4d19-47f1-a8b2-3b19711e3213":{
+      
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "00cfb093-78b5-4a3e-a50d-c13edbddbeb6":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "56bed9b7-b86c-4cff-93cc-673b867f3636":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "69cedeae-def8-41ac-95f6-e3921dcc2f40":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "025e51f5-1fd1-4023-83fa-ee2c68db1344":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "73179571-6e3d-4518-806d-417cb04b9dde":{
+      
+      "bvh": "other/motionbuilder-format.bvh"
+    
     }
+    
    },
   "tags":{
      "biomechanics":{
@@ -444,3 +623,4 @@
      }
   }
 }
+

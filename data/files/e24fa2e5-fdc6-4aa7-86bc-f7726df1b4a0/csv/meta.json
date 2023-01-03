@@ -1,0 +1,23 @@
+{
+    "frequency": 20.0,
+    "uuid": "e24fa2e5-fdc6-4aa7-86bc-f7726df1b4a0",
+    "measured": "2021-05-06T22:19:05.609000Z",
+    "frame_count": 2396,
+    "title": "nada and goolam 2",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "range of motion test",
+        "test run 1"
+    ]
+}

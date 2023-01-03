@@ -1,0 +1,22 @@
+{
+    "frequency": 20.0,
+    "uuid": "986afee0-98db-437f-8993-f0271b1b7227",
+    "measured": "2021-05-06T22:44:29.535000Z",
+    "frame_count": 4792,
+    "title": "Goolam 4m IRC",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightHand",
+        "RightUpperArm"
+    ],
+    "tags": [
+        "biomechanics",
+        "range of motion test",
+        "upper body no hips"
+    ]
+}

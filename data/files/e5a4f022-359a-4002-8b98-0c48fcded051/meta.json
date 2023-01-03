@@ -1,0 +1,16 @@
+{
+    "frequency": 20.0,
+    "uuid": "e5a4f022-359a-4002-8b98-0c48fcded051",
+    "measured": "2021-06-05T15:26:45.272000Z",
+    "frame_count": 1198,
+    "title": "Hussein tractor Upper body w hip",
+    "bones": [
+        "ChestBottom",
+        "Hip",
+        "LeftForeArm",
+        "LeftUpperArm",
+        "RightForeArm",
+        "RightUpperArm"
+    ],
+    "tags": []
+}
