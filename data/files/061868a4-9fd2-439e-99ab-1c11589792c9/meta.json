@@ -1,0 +1,12 @@
+{
+    "title": "Right arm",
+    "tags": [],
+    "measured": "2019-11-04T20:55:54.691000Z",
+    "frame_count": 399,
+    "bones": [
+        "RightForeArm",
+        "RightUpperArm"
+    ],
+    "frequency": 40.0,
+    "uuid": "061868a4-9fd2-439e-99ab-1c11589792c9"
+}

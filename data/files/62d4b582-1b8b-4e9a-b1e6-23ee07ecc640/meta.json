@@ -1,0 +1,29 @@
+{
+    "title": "15 notch test",
+    "tags": [
+        "biomechanics",
+        "range of motion test",
+        "test"
+    ],
+    "measured": "2019-10-28T22:42:13.275000Z",
+    "frame_count": 798,
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftFootTop",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightFootTop",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "frequency": 40.0,
+    "uuid": "62d4b582-1b8b-4e9a-b1e6-23ee07ecc640"
+}

@@ -1,0 +1,29 @@
+{
+    "frequency": 125.0,
+    "title": "15 notch full",
+    "bones": [
+        "ChestBottom",
+        "Head",
+        "Hip",
+        "LeftFootTop",
+        "LeftForeArm",
+        "LeftHand",
+        "LeftLowerLeg",
+        "LeftThigh",
+        "LeftUpperArm",
+        "RightFootTop",
+        "RightForeArm",
+        "RightHand",
+        "RightLowerLeg",
+        "RightThigh",
+        "RightUpperArm"
+    ],
+    "frame_count": 2495,
+    "uuid": "cb918f92-3cfc-4116-8777-86fe4ff46ace",
+    "measured": "2019-07-02T19:45:41.227000Z",
+    "tags": [
+        "biomechanics",
+        "experiment ",
+        "range of motion test"
+    ]
+}

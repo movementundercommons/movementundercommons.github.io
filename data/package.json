@@ -608,7 +608,160 @@
     "73179571-6e3d-4518-806d-417cb04b9dde":{
       
       "bvh": "other/motionbuilder-format.bvh"
-    
+    },
+    "3a2e2327-2925-4fbf-b41d-58acb1da46b6":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "76ab6b9a-cad0-4000-a5c6-2130d88e4368":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "9281d10b-3c08-458c-85d6-c4c513f5a925":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "4602d76b-b547-4891-8b73-e5e0ee1b265b":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "0448f4b0-5dec-46d9-99ab-25c2131dcc26":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "0369dcf7-cf11-452b-894b-d426172fa562":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "90dd639d-5709-438c-beb1-8ed9d48f8a0f":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "7a6c40e5-3e73-4482-ac72-d681cb46bcde":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "ad6189cd-1bc5-4283-ba73-4ae082a0f58d":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "fd05e46b-1a5c-4c3e-a295-1f8f0c6b03bd":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "65304785-698d-4cb0-962e-0a7e968f0c8e":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "f56f582c-4368-466c-af17-77d2329ee513":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "17934545-c028-452b-9fa7-63df1e8cabcb":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "868533a6-7b31-45fe-9aa1-8bad321777e9":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "1f4c2774-16a3-4401-91e6-9c50cc721605":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "4ec1b285-6a99-4b06-b5ec-4d0d5f543035":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "574f1dea-1d32-4f7e-8037-93d6edb4c1a6":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "4b4889ae-2f89-4a8a-bc45-220e73268b73":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "e7720156-070f-42ef-8f9a-c4721da0b88b":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "061868a4-9fd2-439e-99ab-1c11589792c9":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "62d4b582-1b8b-4e9a-b1e6-23ee07ecc640":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "20d8fd96-7371-4fd7-b412-0fbc29ed28ae":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "6bd09536-224d-4c35-abc5-cd45a43beea4":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "1ad1d166-68ff-4043-9b03-ab089bbe7992":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "3be2b9c5-0d31-4420-8e59-fa669854360a":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "a79cd5fb-d50d-43c8-a362-9b16f522c36d":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "167cc562-42f2-4285-8d0a-439637908288":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "f9664bb2-7dec-45e0-b853-e894877b4343":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "cb918f92-3cfc-4116-8777-86fe4ff46ace":{
+      "meta":"meta.json",
+      "csv": "csv.zip",
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "692cae96-bfca-4e20-aa2c-80a90d5f5c0b":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "3d2df1a8-e6eb-4e11-87e3-2f9a47c37d7f":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "d0e74484-0485-4255-9eda-8b26fbd97cf1":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "67b654c9-11ab-4b8e-af51-7298161828f2":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "b6af58ef-ae45-4270-818c-13449110c1c5":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "dd532fa3-da46-4810-8d08-ea419a4dd34c":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"
+    },
+    "89561076-2555-4bfe-9e95-4e01d2c07bb4":{
+      "fbx": "other/notch.fbx",
+      "bvh": "other/motionbuilder-format.bvh"                                             
     }
     
    },
